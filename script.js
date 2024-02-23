@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    const url = tabs[0].url;
+    const [url] = tabs;
     console.log("URL de la pestaña actual:", url);
 
     // Verificar si la URL está en una pantalla protegida
